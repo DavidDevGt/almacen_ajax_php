@@ -7,29 +7,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <h3>Empleados</h3>
+    <div class="container">
+        <h3 class="text-center">Empleados</h3>
 
-    <form action="" method="post">
-        <label for="campo">Buscar: </label>
-        <input type="text" name="campo" id="campo">
-    </form>
+        <form class="mb-3 mt-2" action="" method="post">
+            <label class="form-label" for="campo">Buscar: </label>
+            <input class="form-control" type="text" name="campo" id="campo">
+        </form>
 
-    <p></p>
+        <p></p>
 
-    <table class="table table-striped">
-        <thead>
-            <th>Num empleado</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Fecha nacimiento</th>
-            <th>Fecha ingreso</th>
-            <th></th>
-            <th></th>
-        </thead>
+        <table class="table table-hover table-success table-striped">
+            <thead>
+                <th>Num empleado</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha nacimiento</th>
+                <th>Fecha ingreso</th>
+                <th></th>
+                <th></th>
+            </thead>
 
-        <tbody id="content">
+            <tbody id="content">
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
