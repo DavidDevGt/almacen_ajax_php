@@ -37,7 +37,7 @@ if($num_rows > 0){
         $html .= '<td>'.$row['fecha_ingreso'].'</td>';
         $html .= '<td><a class="btn btn-success" href>Editar</a></td>';
         $html .= '<td><a class="btn btn-danger" href>Eliminar</a></td>';
-        $html .= '<tr>';
+        $html .= '</tr>';
     }
 }else{
     $html .= '<tr>';
