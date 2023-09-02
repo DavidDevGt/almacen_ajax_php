@@ -20,7 +20,8 @@ if ($campo != null) {
     $where .= ")";
 }
 
-$sql = "SELECT " . implode(", ", $columns) . " FROM $table";
+$sql = "SELECT " . implode(", ", $columns) . " FROM $table
+$where ";
 $resultado = $conn->query($sql);
 $num_rows = $resultado->num_rows;
 
