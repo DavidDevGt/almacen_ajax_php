@@ -28,7 +28,7 @@
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5 rounded">
         <h3 class="mb-4 text-center">Empleados</h3>
 
         <form class="mb-4" action="" method="post">
@@ -40,7 +40,7 @@
 
         <p class="mb-3"></p>
 
-        <table class="table table-hover table-success table-striped mb-3 rounded">
+        <table class="table table-hover table-success table-striped">
             <thead>
                 <tr>
                     <th>Num empleado</th>
