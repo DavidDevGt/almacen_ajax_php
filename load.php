@@ -2,7 +2,7 @@
 
 require 'config.php';
 
-$columns = ['no_emp', 'fecha_nacimiento', 'apellido', 'fecha_ingreso'];
+$columns = ['no_emp', 'fecha_nacimiento', 'nombre', 'apellido', 'fecha_ingreso'];
 $table = "empleados";
 
 $campo = isset($_POST['campo']) ? $conn->real_escape_string($_POST['campo']) : null;
