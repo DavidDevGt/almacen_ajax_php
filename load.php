@@ -7,7 +7,7 @@ $table = "empleados";
 
 $campo = isset($_POST['campo']) ? $conn->real_escape_string($_POST['campo']) : null;
 
-$sql = "SELECT " . implode(", ", $columns) . "FROM $table";
+$sql = "SELECT " . implode(", ", $columns) . " FROM $table";
 $resultado = $conn->query($sql);
 $num_rows = $resultado->num_rows;
 
@@ -28,7 +28,7 @@ if($num_rows > 0){
 }else{
     $html .= '<tr>';
     $html .= '<td colspan="7">Sin resultados</td>';
-    $html .= '</td>';
+    $html .= '</tr>';
 }
 
 echo json_encode($html, JSON_UNESCAPED_UNICODE);
