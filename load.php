@@ -7,6 +7,19 @@ $table = "empleados";
 
 $campo = isset($_POST['campo']) ? $conn->real_escape_string($_POST['campo']) : null;
 
+$where = '';
+
+if ($campo != null) {
+    $where = "WHERE (";
+
+    $cont = count($columns);
+    for ($i = 0; $i < $cont; $i++) {
+        $where .= $columns[$i] . " LIKE '%". $campo . "%' OR ";
+    }
+    $where = substr_replace($where, "", -3);
+    $where .= ")";
+}
+
 $sql = "SELECT " . implode(", ", $columns) . " FROM $table";
 $resultado = $conn->query($sql);
 $num_rows = $resultado->num_rows;
@@ -21,8 +34,8 @@ if($num_rows > 0){
         $html .= '<td>'.$row['apellido'].'</td>';
         $html .= '<td>'.$row['fecha_nacimiento'].'</td>';
         $html .= '<td>'.$row['fecha_ingreso'].'</td>';
-        $html .= '<td><a href>Editar</a></td>';
-        $html .= '<td><a href>Eliminar</a></td>';
+        $html .= '<td><a class="btn btn-success" href>Editar</a></td>';
+        $html .= '<td><a class="btn btn-danger" href>Eliminar</a></td>';
         $html .= '<tr>';
     }
 }else{

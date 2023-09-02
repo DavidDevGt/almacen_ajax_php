@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h3 class="text-center">Empleados</h3>
+        <h3 class="mt-3 text-center">Empleados</h3>
 
         <form class="mb-3 mt-2" action="" method="post">
             <label class="form-label" for="campo">Buscar: </label>
@@ -37,6 +37,8 @@
     <script>
 
         getData()
+
+        document.getElementById("campo").addEventListener("keyup", getData)
 
         function getData(){
             let input = document.getElementById("campo").value
