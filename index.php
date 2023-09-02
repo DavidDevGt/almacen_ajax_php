@@ -33,5 +33,26 @@
             </tbody>
         </table>
     </div>
+
+    <script>
+
+        getData()
+
+        function getData(){
+            let input = document.getElementById("campo").value
+            let content = document.getElementById("content")
+            let url = "load.php"
+            let formData = new FormData()
+            formData.append('campo', input)
+
+            fetch(url, {
+                method: "POST",
+                body: formData
+            }).then(response => response.json())
+            .then(data => {
+                content.innerHTML = data
+            }).catch(err => console.log(err))
+        }
+    </script>
 </body>
 </html>
