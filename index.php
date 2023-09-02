@@ -40,7 +40,7 @@
 
         <p class="mb-3"></p>
 
-        <table class="table table-hover table-success table-striped">
+        <table class="table table-hover table-success table-striped mb-3 rounded">
             <thead>
                 <tr>
                     <th>Num empleado</th>
